@@ -1,0 +1,794 @@
+body {
+    background-color: #ededed;
+    font-family: 'Oswald', sans-serif;
+    margin-top: 0;
+    position: relative;
+    padding: 0;
+}
+
+/* Main header adjustments */
+.main-header {
+    background: #181015 url('../images/bannerr.jpeg') no-repeat center center;
+    background-size: cover;
+    min-height: 100vh;
+    text-align: center;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-header img {
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Navbar adjustments */
+.navbar {
+    background-color: black;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .nav {
+    display: flex;
+    justify-content: center;
+}
+
+.header-title {
+    font-weight: 700;
+    font-size: 4em;
+}
+
+.header-subtitle {
+    font-weight: 300;
+    font-size: 1.5em;
+    color: #1e3d59; /* Changed to a blue color */
+}
+
+.navbar-nav > li > a {
+    color: whitesmoke;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.navbar-nav > li > a:hover, 
+.navbar-nav > li > a:focus, 
+.navbar-nav > li.current-page > a {
+    color: #1e3d59; /* Changed to a blue color */
+    background-color: transparent;
+}
+
+.navbar-nav > li.current-page > a {
+    color: #1e3d59 !important; /* Changed to a blue color */
+}
+
+.navbar-nav .hidden {
+    display: none;
+}
+
+.navbar-toggle {
+    border-color: white;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: white;
+}
+
+/* Remove Box Shadow */
+.navbar-inverse {
+    box-shadow: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .navbar-collapse {
+        text-align: left;
+    }
+}
+
+/* Typography and buttons styling */
+.content-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+/* Styles pour les titres et les stickers */
+.classic-title {
+    margin-top: 100px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    position: relative;
+    text-align: left; 
+}
+
+.inner-sticker, .outer-sticker {
+    font-weight: 300;
+    z-index: 2;
+    position: relative;
+    display: inline-block;
+}
+
+.inner-sticker {
+    display: inline-block;
+    color: #fff;
+    padding: 10px 20px;
+    margin-right: 15px; /* Ajustez cette valeur pour ajouter de l'espace entre les stickers */
+    position: relative;
+    top: 50%;
+    transform: translateY(-30%);
+}
+
+.outer-sticker {
+    color: #b0b0b0;
+    padding: 10px 20px;
+    margin-left: 70px; /* Augmentez la marge gauche pour déplacer le texte vers la droite */
+    transform: translateY(-30%);
+}
+
+.incline-div {
+    position: absolute;
+    top: 0;
+    left: 0; /* Ajustez cette valeur pour aligner avec le texte */
+    border-top: 60px solid #1e3d59; /* Changed to a blue color */
+    border-right: 60px solid transparent;
+    width: 250px;
+    z-index: 1;
+}
+
+/* Footer widget Section */
+.footer-widget {
+    padding: 80px 0;
+    border-bottom: 1px solid rgba(153, 153, 153, 0.3);
+}
+
+.footer-widget .section-bg {
+    background-color: #ebebeb;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.footer-widget h3 {
+    border-bottom: 1px solid rgba(153, 153, 153, 0.3);
+    color: #999;
+    padding-bottom: 25px;
+    margin-bottom: 15px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.footer-widget ul {
+    padding-left: 0;
+}
+
+.footer-widget ul li {
+    list-style-type: none;
+    padding: 7px 0;
+}
+
+.footer-widget ul li:before {
+    content: "\f363";
+    font-family: 'ionicons';
+    padding-right: 5px;
+    font-size: 14px;
+    color: #999;
+}
+
+.footer-widget ul li a {
+    color: #999;
+    font-family: 'Roboto';
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.widget-img-box {
+    margin-top: 30px;
+}
+
+.widget-img {
+    width: 49%;
+    display: inline-block;
+}
+
+.footer {
+    padding: 10px 0 20px;
+}
+
+.footer h3,
+.footer a {
+    color: #999;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.trait-horizontal {
+    border-bottom: 1px solid #999;
+    width: 60%;
+    margin: 0 auto;
+}
+
+/* Header Section */
+.site-header-bg {
+    width: 100%;
+    background-color: #111;
+    z-index: 1;
+    padding: 15px 0;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Roboto';
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-header-bg img {
+    height: 30px;
+}
+
+/* Navigation Menu */
+.navbar-default {
+    border-color: #262626;
+    background-color: #111;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .active > a:hover {
+    color: #fabe12;
+    background-color: transparent;
+}
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+}
+
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:hover {
+    color: #fff;
+}
+
+/* Main Header Section */
+.header-quote {
+    color: white;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.header-saclab {
+    color: #1e3d59; /* Changed to a blue color */
+}
+
+.main-header p {
+    font-weight: 300;
+    font-size: 18px;
+    letter-spacing: 6px;
+}
+
+.header-title .thin {
+    letter-spacing: 6px;
+}
+
+.intro {
+    padding: 200px 0;
+    background-image: url(../images/bannerr.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: -90px;
+    z-index: 11;
+    position: relative;
+}
+
+.neutral {
+    background-color: #ebebeb;
+    height: 90px;
+    z-index: 10;
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+/* Styles pour les icônes de réseaux sociaux */
+.follow-me-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: left center;
+}
+
+.follow-me-icons a {
+    color: #999;
+    transition: color 0.3s;
+}
+
+.follow-me-icons a:hover {
+    color: #1e3d59; /* Changed to a blue color */
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .navbar-collapse {
+        text-align: left;
+    }
+}
+
+.trait-horizontal {
+    border-bottom: 1px solid #999;
+    width: 60%; /* Définissez la largeur du trait */
+    margin: 0 auto;
+}
+
+body {
+    background-color: #EFFCFE; 
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.content-area {
+    background-color: #ffffff; /* White background for text area */
+    padding: 80px; /* Adjust padding as needed */
+    margin: 80px; /* Adjust margin as needed */
+}
+
+.content-area2 {
+    background-color: black; /* White background for text area */
+    padding: 80px; /* Adjust padding as needed */
+    margin: 80px; /* Adjust margin as needed */
+}
+
+.title-mt0 {
+    text-align: center;
+    color: #1e3d59;
+}
+
+/* CTA Section */
+.cta {
+    background-color: #f0f0f0; /* Light gray background for the CTA section */
+    color: #333; /* Dark text color for contrast */
+    padding: 40px 0;
+}
+.cta .btn-robot {
+    background-color: #1e3d59; /* Blue background for the button */
+    color: #fff; /* White text color for the button */
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+.cta .btn-robot:hover {
+    background-color: #fabe12; /* Change background color on hover */
+    color: #1e3d59; /* Change text color on hover */
+}
+
+/* Contact Section */
+.contact .title-box p,
+.contact .title-box h2,
+.contact .inner-p {
+    text-align: center; /* Center align the text */
+}
+
+/* Contact details styling */
+.contact-detail {
+    border-bottom: 1px solid #ddd;
+    text-transform: uppercase;
+    padding: 10px 0 15px;
+    font-size: 10px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+/* Contact form input styling */
+.contact-form .form-control {
+    border-color: transparent;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0;
+    box-shadow: none;
+    font-family: 'Roboto';
+    padding-left: 0;
+}
+.contact-form .form-control:active,
+.contact-form .form-control:focus {
+    border-bottom: 1px solid #fabe12;
+    box-shadow: none;
+}
+.contact-form ::-webkit-input-placeholder {
+    text-transform: uppercase;
+    font-family: 'Roboto';
+}
+.contact-form ::-moz-placeholder {
+    text-transform: uppercase;
+    font-family: 'Roboto';
+}
+.contact-form :-ms-input-placeholder {
+    text-transform: uppercase;
+    font-family: 'Roboto';
+}
+.contact-form :-moz-placeholder {
+    text-transform: uppercase;
+    font-family: 'Roboto';
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .cta {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+.image-left, .image-right {
+    margin: 1em 0;
+}
+
+@media (min-width: 20em) {
+    .image-left, .image-right {
+        display: flex;
+        align-items: center;
+    }
+
+    .image-left img {
+        margin-right: 1em;
+        float: left; /* fallback */
+    }
+
+    .image-right img {
+        order: 1;
+        margin-left: 1em;
+        float: right; /* fallback */
+    }
+    
+    /* clearfix for fallback */
+    .image-left::after,
+    .image-right::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+@media (min-width: 30em) {
+    .image-left img, .image-right img {
+        max-width: 30%;
+        height: auto;
+        flex-shrink: 0;
+    }
+}
+
+/* Styles for themes list */
+.themes-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 20px 0;
+}
+
+.themes-list li {
+    background-color: #1e3d59;
+    color: white;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.themes-list li:hover {
+    background-color: #fabe12;
+    color: #1e3d59;
+}
+
+/* Add fade-in effect for content */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.boxed {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Custom styles for Airbus and Ariane Group sections */
+.custom-classic-title {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.custom-inner-sticker {
+    font-weight: 300;
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    padding: 10px 20px;
+    margin-right: 15px;
+}
+
+.custom-boxed {
+    background-color: inherit;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 250px; /* Adjust as needed */
+}
+
+.custom-boxed .p-large {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    font-size: 1.2em; /* Adjust as needed */
+}
+
+.bg-gray, .bg-skyblue {
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.bg-gray {
+    background-color: #424242;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.bg-skyblue {
+    background-color: #07c9e3;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* Calendrier */
+.calendar-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.calendar {
+    width: 60%;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.events {
+    width: 30%;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 20px; /* Add margin to separate from calendar */
+}
+
+.calendar table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.calendar th,
+.calendar td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.calendar th {
+    background-color: #f2f2f2;
+}
+
+.today {
+    background-color: #d1e7dd;
+}
+
+.event {
+    background-color: #007bff; /* Changed to blue */
+    color: white;
+}
+
+.calendar-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section-title {
+    margin-top: 50px;
+    text-align: left;
+    color: #1e3d59;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+
+/* Team Section */
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.team-item {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 100px; /* Augmenter l'espacement entre les éléments */
+    display: flex;
+    flex-direction: column;
+}
+
+.team-box {
+    text-align: center;
+    width: 100%;
+    position: relative;
+    background-color: #f7f7f7;
+    padding-top: 90px; /* Augmenter l'espace pour l'image */
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.team-img {
+    position: absolute;
+    top: 0px; /* Ajuster pour descendre l'image */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 5px;
+}
+
+.team-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.team-img-detail {
+    font-family: 'Roboto';
+    text-align: center;
+    background-color: #f7f7f7;
+    color: #999;
+    padding: 20px;
+    margin-top: 10px; /* Remonter pour chevaucher l'image */
+    flex-grow: 1;
+}
+
+.team-img-detail h4 {
+    color: #111;
+    padding-top: 20px;
+}
+
+.team-img-detail h4, .team-img-detail h5 {
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.team-img-detail p {
+    padding: 20px;
+}
+
+.social {
+    font-size: 24px;
+    background-color: #1e3d59;
+    padding: 5px;
+    text-align: center;
+}
+
+.social a {
+    color: #fff;
+    padding: 8px;
+}
+
+@media (max-width: 767px) {
+    .team-img {
+        width: 80px;
+        height: 80px;
+        top: -40px; /* Ajuster pour descendre l'image sur les petits écrans */
+    }
+
+    .team-img-detail {
+        margin-top: 50px; /* Ajuster pour les petits écrans */
+    }
+}
+
+/* Styles spécifiques pour la section "Internships" */
+.content-area2 {
+    background-color: black;
+    padding: 80px;
+    margin: 80px;
+    color: white; /* Default text color */
+}
+
+.title-box p.title-mt0, .title-box h2.title-mt0 {
+    color: white; /* Blue color for the title */
+}
+
+/* Styles pour les étudiants */
+#students .title {
+    color: white; /* White title for the students section */
+}
+
+.owl-carousel .item figcaption {
+    color: white; /* Default color for the captions */
+}
+
+.owl-carousel .item figcaption i {
+    color: #d1e7dd; /* Blue color for the descriptions */
+}
+
+/* Style pour les titres et les descriptions des étudiants */
+.owl-carousel .item figcaption b {
+    color: white; /* White color for the names */
+}
+
+.owl-carousel .item figcaption i {
+    color: #d1e7dd; /* Blue color for the project descriptions */
+}
+
+/* Styles pour les images des étudiants */
+.students--square {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #d1e7dd; /* Blue border for the images */
+}
+
+/* Adding some padding and margin for better spacing */
+.owl-carousel .item {
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background for better readability */
+    border-radius: 10px;
+}
+
+/* Adding hover effect for items */
+.owl-carousel .item:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Slightly more visible on hover */
+}
+
+/* Style for figcaption to add padding */
+.owl-carousel .item figcaption {
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.special-event {
+    background-color: #1e3d59; /* Blue background color for special events */
+    color: white;
+}
