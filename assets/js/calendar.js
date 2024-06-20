@@ -17,26 +17,16 @@ document.addEventListener('DOMContentLoaded', function() {
     let selectedEventDate = null;
 
     async function fetchEvents() {
-        const response = await fetch('/events');
+        const response = await fetch('events.json');
         return await response.json();
     }
 
     async function addEvent(event) {
-        const response = await fetch('/events', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(event)
-        });
-        return await response.json();
+        console.log('Event added:', event);
     }
 
     async function deleteEvent(date) {
-        const response = await fetch(`/events/${date}`, {
-            method: 'DELETE'
-        });
-        return await response.json();
+        console.log('Event deleted:', date);
     }
 
     function updateEventsTable(events) {
@@ -44,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
         events.sort((a, b) => new Date(a.date) - new Date(b.date));  // Sort events from closest to farthest date
         events.slice(currentEventPage * 4, (currentEventPage + 1) * 4).forEach(event => {
             const tr = document.createElement('tr');
-            tr.innerHTML = `<td>${event.date}</td><td>${event.title}</td><td>${event.details.split(',')[1]}</td>`;
+            tr.innerHTML = `<td>${event.date}</td><td>${event.title}</td><td>${event.details}</td>`;
             eventsTableBody.appendChild(tr);
         });
         nextEventsPageButton.style.display = events.length > (currentEventPage + 1) * 4 ? 'block' : 'none';
@@ -81,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (date === today.getDate() && year === today.getFullYear() && month === today.getMonth()) {
                 table += `<td class="today">${date}</td>`;
             } else if (event) {
-                table += `<td class="event" data-title="${event.title}" data-details="${event.details}" data-date="${event.date}">${date}</td>`;
+                table += `<td class="event special-event" data-title="${event.title}" data-details="${event.details}" data-date="${event.date}">${date}</td>`;
             } else {
                 table += `<td>${date}</td>`;
             }
@@ -96,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (date === today.getDate() && year === today.getFullYear() && month === today.getMonth()) {
                     table += `<td class="today">${date}</td>`;
                 } else if (event) {
-                    table += `<td class="event" data-title="${event.title}" data-details="${event.details}" data-date="${event.date}">${date}</td>`;
+                    table += `<td class="event special-event" data-title="${event.title}" data-details="${event.details}" data-date="${event.date}">${date}</td>`;
                 } else {
                     table += `<td>${date}</td>`;
                 }
