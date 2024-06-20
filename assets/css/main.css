@@ -792,3 +792,15 @@ body {
     background-color: #1e3d59; /* Blue background color for special events */
     color: white;
 }
+
+.modal-content {
+    padding: 20px;
+}
+
+.form-horizontal .control-label {
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
