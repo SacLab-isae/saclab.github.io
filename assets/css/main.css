@@ -8,7 +8,7 @@ body {
 
 /* Main header adjustments */
 .main-header {
-    background: #181015 url('assets/images/bannieree.png') no-repeat center center;
+    background: #181015 url('/assets/images/bannieree.png') no-repeat center center;
     background-size: cover; /* Utiliser cover pour afficher l'image comme une bannière */
     background-position: center center; /* Centrer l'image verticalement et horizontalement */
     min-height: 50vh;
@@ -288,7 +288,7 @@ body {
 
 .intro {
     padding: 200px 0;
-    background-image: url(assets/images/bannieree.png);
+    background-image: url(/assets/images/bannieree.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
