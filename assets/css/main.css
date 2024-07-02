@@ -8,7 +8,7 @@ body {
 
 /* Main header adjustments */
 .main-header {
-    background: #181015 url('../images/bannieree.png') no-repeat center center;
+    background: #181015 url('../images/banniere.png') no-repeat center center;
     background-size: cover; /* Utiliser cover pour afficher l'image comme une bannière */
     background-position: center center; /* Centrer l'image verticalement et horizontalement */
     min-height: 50vh;
@@ -20,6 +20,7 @@ body {
     align-items: center;
     justify-content: center;
 }
+
 
 .navbar-header img {
     margin: 0 auto;
@@ -288,7 +289,7 @@ body {
 
 .intro {
     padding: 200px 0;
-    background-image: url(../images/bannieree.png);
+    background-image: url(../images/banniere.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -792,4 +793,16 @@ body {
 .special-event {
     background-color: #1e3d59; /* Blue background color for special events */
     color: white;
+}
+
+.modal-content {
+    padding: 20px;
+}
+
+.form-horizontal .control-label {
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 15px;
 }
